@@ -8,11 +8,11 @@
   "sealring_x": 3030.0,
   "sealring_y": 2805.0,
   "repository": "https://github.com/SDMote/IHP__MCU1074.git",
-  "pdk_version": "3b5a704ba6738aa686b08706187830e6284d2a10",
+  "pdk_version": "2dcbf0761b18342baeb85b0f5a94e2bec22db496",
   "process": "SG13G2",
   "dependencies": {},
   "tools": {},
-  "top_cell_name": "MCU1074",
+  "top_cell_name": "mcu1074",
   "release": {
     "version": "v.1.0.0",
     "gds": "release/v.1.0.0/gds",

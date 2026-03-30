@@ -1,0 +1,22 @@
+{
+  "name": "MCU1074",
+  "design_type": "D",
+  "technology": "IHP",
+  "unique_id": "1074",
+  "license": "Apache-2.0",
+  "trl": 3,
+  "sealring_x": 3030.0,
+  "sealring_y": 2805.0,
+  "repository": "https://github.com/SDMote/IHP__MCU1074.git",
+  "pdk_version": "3b5a704ba6738aa686b08706187830e6284d2a10",
+  "process": "SG13G2",
+  "dependencies": {},
+  "tools": {},
+  "top_cell_name": "MCU1074",
+  "release": {
+    "version": "v.1.0.0",
+    "gds": "release/v.1.0.0/gds",
+    "netlist": "release/v.1.0.0/netlist",
+    "doc": "release/v.1.0.0/doc"
+  }
+}

@@ -1,0 +1,1910 @@
+
+########################################################################
+#
+# My custom IO cells
+#
+########################################################################
+
+MACRO sg13g2_IOPadVddH
+    CLASS PAD POWER ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadVddH 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 67.500 80.000 90.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 3.900 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 3.900 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 3.900 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 3.900 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 127.500 80.000 132.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 3.900 132.500 ;
+    END
+  END iovss
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 15.000 150.000 38.000 190.000 ;
+        RECT 42.000 150.000 65.000 190.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 156.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadVddH
+
+
+MACRO sg13g2_IOPadVddV
+    CLASS PAD POWER ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadVddV 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 67.500 80.000 90.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 3.900 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 3.900 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 3.900 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 3.900 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 127.500 80.000 132.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 3.900 132.500 ;
+    END
+  END iovss
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 15.000 141.500 38.000 200.000 ;
+        RECT 42.000 141.500 65.000 200.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 156.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadVddV
+
+
+MACRO sg13g2_IOPadVssH
+    CLASS PAD POWER ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadVssH 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 80.000 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 80.000 132.500 ;
+    END
+  END iovss
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 15.000 178.000 38.000 220.000 ;
+        RECT 42.000 178.000 65.000 220.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 132.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadVssH
+
+
+MACRO sg13g2_IOPadVssV
+    CLASS PAD POWER ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadVssV 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 80.000 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 80.000 132.500 ;
+    END
+  END iovss
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 15.000 161.500 38.000 220.000 ;
+        RECT 42.000 161.500 65.000 220.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 132.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadVssV
+
+
+MACRO sg13g2_IOPadVdd2
+    CLASS PAD POWER ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadVdd2 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 67.500 80.000 90.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 3.900 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 3.900 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 3.900 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 3.900 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 127.500 80.000 132.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 76.100 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 3.900 132.500 ;
+    END
+  END iovss
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+  END vss
+  PIN vdd2
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 54.100 156.500 64.100 230.000 ;
+    END
+  END vdd2
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+      RECT 54.100 180.000 64.100 230.000 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadVdd2
+
+
+MACRO sg13g2_IOPadInH
+    CLASS PAD INPUT ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadInH 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 80.000 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 80.000 132.500 ;
+    END
+  END iovss
+  PIN p2c
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 39.830 157.810 40.120 180.000 ;
+      LAYER Metal3 ;
+        RECT 39.725 179.710 40.225 180.000 ;
+    END
+  END p2c
+  PIN pad
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+  END pad
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 15.000 141.500 25.000 190.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 55.000 178.000 65.000 220.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 132.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadInH
+
+
+MACRO sg13g2_IOPadInV
+    CLASS PAD INPUT ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadInV 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 80.000 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 80.000 132.500 ;
+    END
+  END iovss
+  PIN p2c
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 39.830 157.810 40.120 180.000 ;
+      LAYER Metal3 ;
+        RECT 39.725 179.710 40.225 180.000 ;
+    END
+  END p2c
+  PIN pad
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+  END pad
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 15.000 141.500 25.000 200.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 55.000 161.500 65.000 220.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 132.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadInV
+
+
+MACRO sg13g2_IOPadOut30mAH
+    CLASS PAD OUTPUT ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadOut30mAH 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN c2p
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 38.145 167.000 41.855 180.000 ;
+      LAYER Metal3 ;
+        RECT 38.145 179.710 41.855 180.000 ;
+    END
+  END c2p
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 80.000 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 80.000 132.500 ;
+    END
+  END iovss
+  PIN pad
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+  END pad
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 15.000 141.500 25.000 190.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 55.000 178.000 65.000 220.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 132.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadOut30mAH
+
+
+MACRO sg13g2_IOPadOut30mAV
+    CLASS PAD OUTPUT ;
+    ORIGIN 0.000 0.000 ;
+    FOREIGN sg13g2_IOPadOut30mAV 0.000 0.000 ;
+    SIZE 80.000 BY 180.000 ;
+    SYMMETRY X Y R90 ;
+    SITE sg13g2_ioSite ;
+  PIN c2p
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 38.145 167.000 41.855 180.000 ;
+      LAYER Metal3 ;
+        RECT 38.145 179.710 41.855 180.000 ;
+    END
+  END c2p
+  PIN iovdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 93.500 80.000 119.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 66.000 80.000 91.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 95.000 80.000 117.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 67.500 80.000 90.000 ;
+    END
+  END iovdd
+  PIN iovss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 7.000 80.000 32.500 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 126.000 80.000 134.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 34.500 80.000 60.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 36.000 80.000 58.500 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 8.500 80.000 31.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 0.000 127.500 80.000 132.500 ;
+    END
+  END iovss
+  PIN pad
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal3 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal4 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER Metal5 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal1 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+      LAYER TopMetal2 ;
+        RECT 5.000 0.000 75.000 3.000 ;
+    END
+  END pad
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 140.000 80.000 155.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 15.000 141.500 25.000 200.000 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 140.000 80.000 158.000 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0.000 162.200 80.000 178.000 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 160.000 80.000 178.000 ;
+    END
+    PORT
+      LAYER TopMetal2 ;
+        RECT 55.000 161.500 65.000 220.000 ;
+    END
+  END vss
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Metal3 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal4 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER Metal5 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal1 ;
+      RECT 0.000 0.000 80.000 178.000 ;
+    LAYER TopMetal2 ;
+      RECT 0.000 0.000 80.000 132.500 ;
+    LAYER Via1 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+    LAYER Via2 ;
+      RECT 0.000 0.000 80.000 180.000 ;
+  END
+END sg13g2_IOPadOut30mAV

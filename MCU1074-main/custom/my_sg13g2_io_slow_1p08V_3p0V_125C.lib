@@ -1,0 +1,1132 @@
+/************************************************************************
+
+ Copyright 2024 IHP PDK Authors
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+    https://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License. 
+ 
+************************************************************************/
+
+library (my_sg13g2_io_slow_1p08V_3p0V_125C) {
+  comment : "IHP Microelectronics GmbH, 2024";
+  date : "$Date: Wed May  8 12:21:14 2024 $";
+  revision : "$Revision: 0.0.1 $";
+  delay_model : table_lookup;
+  capacitive_load_unit (1,pf);
+  current_unit : "1uA";
+  leakage_power_unit : "1pW";
+  pulling_resistance_unit : "1kohm";
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  voltage_map (vdd, 1.08);
+  voltage_map (iovdd, 3);
+  voltage_map (iovss, 0);
+  voltage_map (vss, 0);
+  voltage_map (GND, 0);
+  define_cell_area (pad_drivers, pad_driver_sites);
+  define_cell_area (bond_pads, pad_slots);
+  default_output_pin_cap : 0;
+  default_inout_pin_cap : 1;
+  default_input_pin_cap : 1;
+  default_fanout_load : 1;
+  default_cell_leakage_power : 0;
+  default_max_transition : 1.2;
+  default_leakage_power_density : 0;
+  default_max_capacitance : 0.3;
+  default_max_fanout : 8;
+  default_wire_load_area : 0.29;
+  default_wire_load_capacitance : 0.0003;
+  default_wire_load_mode : "enclosed";
+  default_wire_load_resistance : 0.0057;
+  in_place_swap_mode : match_footprint;
+  input_threshold_pct_fall : 50;
+  input_threshold_pct_rise : 50;
+  nom_process : 1;
+  nom_temperature : 125;
+  nom_voltage : 1.08;
+  output_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  slew_derate_from_library : 1;
+  slew_lower_threshold_pct_fall : 10;
+  slew_lower_threshold_pct_rise : 10;
+  slew_upper_threshold_pct_fall : 90;
+  slew_upper_threshold_pct_rise : 90;
+  operating_conditions (sg13g2_io_slow_1p08V_3p0V_125C) {
+    process : 1;
+    temperature : 125;
+    voltage : 1.08;
+  }
+  input_voltage (pad) {
+    vih : 3.3;
+    vil : 0;
+    vimax : 3.3;
+    vimin : 0;
+  }
+  input_voltage (core) {
+    vih : 1.2;
+    vil : 0;
+    vimax : 1.2;
+    vimin : 0;
+  }
+  output_voltage (pad) {
+    voh : 3.3;
+    vol : 0;
+    vomax : 3.3;
+    vomin : 0;
+  }
+  output_voltage (core) {
+    voh : 1.2;
+    vol : 0;
+    vomax : 1.2;
+    vomin : 0;
+  }
+  wire_load (Zero) {
+    area : 0.01;
+    capacitance : 0.0001;
+    resistance : 0.0001;
+    slope : 1;
+    fanout_length (1, 0.01);
+    fanout_length (5, 0.01);
+    fanout_length (20, 0.01);
+  }
+  wire_load ("0_1k") {
+    area : 0.36;
+    capacitance : 0.0001;
+    resistance : 0.0035;
+    slope : 7.387;
+    fanout_length (1, 6.43);
+    fanout_length (5, 38.56);
+    fanout_length (20, 146.8);
+  }
+  wire_load ("0_5k") {
+    area : 0.36;
+    capacitance : 0.0001;
+    resistance : 0.0042;
+    slope : 10.99;
+    fanout_length (1, 7.89);
+    fanout_length (5, 47.32);
+    fanout_length (20, 169.4);
+  }
+  wire_load ("1k") {
+    area : 0.36;
+    capacitance : 0.0002;
+    resistance : 0.0053;
+    slope : 10.9;
+    fanout_length (1, 9.93);
+    fanout_length (5, 59.59);
+    fanout_length (20, 215.6);
+  }
+  wire_load ("2k") {
+    area : 0.36;
+    capacitance : 0.0002;
+    resistance : 0.0063;
+    slope : 16.87;
+    fanout_length (1, 11.68);
+    fanout_length (5, 70.11);
+    fanout_length (20, 239.5);
+  }
+  wire_load ("5k") {
+    area : 0.36;
+    capacitance : 0.0003;
+    resistance : 0.0072;
+    slope : 14.58;
+    fanout_length (1, 13.44);
+    fanout_length (5, 80.62);
+    fanout_length (20, 287.1);
+  }
+  wire_load ("10k") {
+    area : 0.37;
+    capacitance : 0.0003;
+    resistance : 0.008;
+    slope : 18.94;
+    fanout_length (1, 14.9);
+    fanout_length (5, 89.39);
+    fanout_length (20, 381.6);
+  }
+  wire_load ("30k") {
+    area : 0.37;
+    capacitance : 0.0003;
+    resistance : 0.0094;
+    slope : 24.61;
+    fanout_length (1, 17.53);
+    fanout_length (5, 105.2);
+    fanout_length (20, 515.5);
+  }
+  wire_load ("50k") {
+    area : 0.37;
+    capacitance : 0.0005;
+    resistance : 0.0152;
+    slope : 31.81;
+    fanout_length (1, 28.33);
+    fanout_length (5, 170);
+    fanout_length (20, 607.6);
+  }
+  wire_load ("100k") {
+    area : 0.39;
+    capacitance : 0.0009;
+    resistance : 0.0265;
+    slope : 40.22;
+    fanout_length (1, 49.37);
+    fanout_length (5, 296.2);
+    fanout_length (20, 812.1);
+  }
+  wire_load ("200k") {
+    area : 0.41;
+    capacitance : 0.0016;
+    resistance : 0.0456;
+    slope : 52.68;
+    fanout_length (1, 84.71);
+    fanout_length (5, 508.3);
+    fanout_length (20, 1051.7);
+  }
+  wire_load ("500k") {
+    area : 0.45;
+    capacitance : 0.0027;
+    resistance : 0.076;
+    slope : 67.44;
+    fanout_length (1, 141.4);
+    fanout_length (5, 848.3);
+    fanout_length (20, 1527.1);
+  }
+  wire_load_selection ("4_metls_routing") {
+    wire_load_from_area (0, 635, 0_1k);
+    wire_load_from_area (635, 3175, 0_5k);
+    wire_load_from_area (3175, 6350, 1k);
+    wire_load_from_area (6350, 12701, 2k);
+    wire_load_from_area (12701, 31752, 5k);
+    wire_load_from_area (31752, 63504, 10k);
+    wire_load_from_area (63504, 190512, 30k);
+    wire_load_from_area (190512, 317520, 50k);
+    wire_load_from_area (317520, 635040, 100k);
+    wire_load_from_area (635040, 1.27008e+06, 200k);
+    wire_load_from_area (1.27008e+06, 3.1752e+06, 500k);
+  }
+  default_wire_load : "1k";
+  default_operating_conditions : sg13g2_io_slow_1p08V_3p0V_125C;
+  default_wire_load_selection : "4_metls_routing";
+  lu_table_template (delay_template_7x6_16) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+    index_2 ("1, 3, 7, 9, 12, 15");
+  }
+  lu_table_template (delay_template_2x2) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("10, 200");
+    index_2 ("500, 30000");
+  }
+  power_lut_template (passive_power_template_7x1_16) {
+    variable_1 : input_transition_time;
+    index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+  }
+  power_lut_template (power_template_7x6_16) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+    index_2 ("1, 3, 7, 9, 12, 15");
+  }
+ cell (sg13g2_IOPadVddH) {
+    area : 14400;
+    pad_cell : true;
+    bond_pads : 1;
+    dont_touch : true;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+      is_pad : true;
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1.01727;
+      related_pg_pin : vdd;
+    }
+  }
+ cell (sg13g2_IOPadVddV) {
+    area : 14400;
+    pad_cell : true;
+    bond_pads : 1;
+    dont_touch : true;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+      is_pad : true;
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1.01727;
+      related_pg_pin : vdd;
+    }
+  }
+ cell (sg13g2_IOPadVssH) {
+    area : 14400;
+    pad_cell : true;
+    bond_pads : 1;
+    dont_touch : true;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+      is_pad : true;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 0.77141;
+      related_pg_pin : vdd;
+    }
+  }
+ cell (sg13g2_IOPadVssV) {
+    area : 14400;
+    pad_cell : true;
+    bond_pads : 1;
+    dont_touch : true;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+      is_pad : true;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 0.77141;
+      related_pg_pin : vdd;
+    }
+  }
+ cell (sg13g2_IOPadInH) {
+    pad_cell : true;
+    area : 14400;
+    dont_touch : true;
+    dont_use : true;
+    cell_footprint : "input";
+    pad_drivers : 1;
+    bond_pads : 1;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+    }
+    leakage_power () {
+      value : 0;
+      when : "pad&p2c";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 788.379;
+      when : "pad&p2c";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 0;
+      when : "!pad&!p2c";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1939.34;
+      when : "!pad&!p2c";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1363.86;
+      related_pg_pin : vdd;
+    }
+    pin (p2c) {
+      direction : "output";
+      output_voltage : "core";
+      function : "pad";
+      related_ground_pin : vss;
+      related_power_pin : vdd;
+      max_capacitance : 0.511894;
+      timing () {
+        related_pin : "pad";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.128437, 0.156341, 0.209301, 0.26138, 0.313254, 0.365086", \
+            "0.129921, 0.160277, 0.21527, 0.267605, 0.319621, 0.37152", \
+            "0.129922, 0.160278, 0.215271, 0.267606, 0.319622, 0.371521", \
+            "0.129923, 0.160279, 0.215272, 0.267607, 0.319623, 0.371522", \
+            "0.129924, 0.16028, 0.215273, 0.267608, 0.319624, 0.371523", \
+            "0.129925, 0.160281, 0.215274, 0.267609, 0.319625, 0.371524", \
+            "0.129926, 0.160282, 0.215275, 0.26761, 0.319626, 0.371525" \
+          );
+        }
+        rise_transition (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.0911138, 0.143001, 0.248865, 0.355819, 0.46337, 0.571267", \
+            "0.0999905, 0.151349, 0.255684, 0.361392, 0.467915, 0.57451", \
+            "0.10577, 0.158143, 0.265081, 0.370243, 0.476096, 0.582889", \
+            "0.108195, 0.160115, 0.265944, 0.37306, 0.478736, 0.585597", \
+            "0.123053, 0.173733, 0.274489, 0.378895, 0.485283, 0.592526", \
+            "0.149693, 0.198494, 0.294069, 0.394742, 0.497169, 0.602121", \
+            "0.174458, 0.219473, 0.312041, 0.409583, 0.509136, 0.612736" \
+          );
+        }
+        cell_fall (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.678008, 0.721423, 0.788094, 0.843279, 0.893033, 0.939333", \
+            "0.705159, 0.748768, 0.815031, 0.869284, 0.918991, 0.965964", \
+            "0.80875, 0.852382, 0.918738, 0.972477, 1.02234, 1.06954", \
+            "0.856371, 0.89997, 0.966223, 1.02116, 1.06995, 1.11843", \
+            "1.18068, 1.22379, 1.29027, 1.34545, 1.39446, 1.44269", \
+            "1.82065, 1.86421, 1.9298, 1.98501, 2.03523, 2.08221", \
+            "2.38962, 2.43241, 2.49779, 2.55238, 2.603, 2.64892" \
+          );
+        }
+        fall_transition (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.20776, 0.248023, 0.318782, 0.388945, 0.460265, 0.532073", \
+            "0.208018, 0.248024, 0.318783, 0.388946, 0.460266, 0.532447", \
+            "0.208019, 0.248025, 0.318818, 0.388947, 0.460267, 0.532448", \
+            "0.20802, 0.248026, 0.318819, 0.389062, 0.460268, 0.533031", \
+            "0.208021, 0.248027, 0.31882, 0.389063, 0.460269, 0.533032", \
+            "0.208022, 0.248028, 0.318821, 0.389064, 0.460561, 0.533033", \
+            "0.209537, 0.249985, 0.3218, 0.391184, 0.463249, 0.534278" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "pad";
+        related_pg_pin : iovdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "6.48615e-09, 6.48635e-09, 6.48586e-09, 6.48589e-09, 6.48539e-09, 6.48601e-09", \
+            "1.2568e-08, 1.25683e-08, 1.25686e-08, 1.25681e-08, 1.25688e-08, 1.25678e-08", \
+            "2.47336e-08, 2.47325e-08, 2.47332e-08, 2.47334e-08, 2.47321e-08, 2.47329e-08", \
+            "3.08162e-08, 3.08168e-08, 3.08161e-08, 3.08154e-08, 3.08163e-08, 3.0817e-08", \
+            "6.1233e-08, 6.12329e-08, 6.1233e-08, 6.12332e-08, 6.12316e-08, 6.12327e-08", \
+            "1.22061e-07, 1.22063e-07, 1.22064e-07, 1.22067e-07, 1.22069e-07, 1.22067e-07", \
+            "1.7782e-07, 1.77831e-07, 1.77823e-07, 1.77827e-07, 1.7783e-07, 1.77829e-07" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "-6.47214e-09, -6.47213e-09, -6.47219e-09, -6.47224e-09, -6.47225e-09, -6.4723e-09", \
+            "-1.25473e-08, -1.25473e-08, -1.25473e-08, -1.25474e-08, -1.25474e-08, -1.25475e-08", \
+            "-2.46978e-08, -2.46978e-08, -2.46979e-08, -2.46979e-08, -2.4698e-08, -2.4698e-08", \
+            "-3.07727e-08, -3.07727e-08, -3.07728e-08, -3.07728e-08, -3.07728e-08, -3.07729e-08", \
+            "-6.11476e-08, -6.11476e-08, -6.11477e-08, -6.11477e-08, -6.11477e-08, -6.11477e-08", \
+            "-1.21898e-07, -1.21898e-07, -1.21898e-07, -1.21898e-07, -1.21898e-07, -1.21898e-07", \
+            "-1.77583e-07, -1.77583e-07, -1.77584e-07, -1.77584e-07, -1.77584e-07, -1.77584e-07" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "pad";
+        related_pg_pin : vdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.00074628, 0.0010612, 0.00126846, 0.00101035, 0.000860111, 0.000447451", \
+            "0.000343645, 0.000529653, 0.000698435, 0.000632456, 0.000380591, 0.000243655", \
+            "-0.000300165, 0.000205459, 0.000223559, 5.23879e-05, -0.000184465, -0.000319889", \
+            "-0.000266793, 0.000110009, 0.000292679, 0.000261152, -9.57971e-05, -0.000420977", \
+            "-0.00126965, -0.00135154, -0.00125971, -0.000960004, -0.000746821, -0.00111131", \
+            "-0.00174019, -0.00143301, -0.00184118, -0.00166416, -0.00222361, -0.00221691", \
+            "-0.001408, -0.0014408, -0.00171914, -0.00197661, -0.00299473, -0.00318124" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.0428208, 0.0426887, 0.0428407, 0.0430691, 0.0432502, 0.0434055", \
+            "0.0416674, 0.0415058, 0.0416367, 0.0418299, 0.0420153, 0.0421414", \
+            "0.041024, 0.0408597, 0.0409803, 0.0411418, 0.0413056, 0.041434", \
+            "0.0406117, 0.0404405, 0.0405405, 0.0407108, 0.0408462, 0.0409532", \
+            "0.0403456, 0.0401975, 0.0403046, 0.0404725, 0.0405976, 0.0407119", \
+            "0.039926, 0.0397557, 0.0397974, 0.0399282, 0.040049, 0.0401386", \
+            "0.0408194, 0.0405311, 0.0404295, 0.0404332, 0.0404826, 0.0405242" \
+          );
+        }
+      }
+    }
+    pin (pad) {
+      direction : "input";
+      is_pad : true;
+      input_voltage : "pad";
+      fanout_load : 1;
+      related_ground_pin : iovss;
+      related_power_pin : iovdd;
+      max_transition : 3.5;
+      capacitance : 0.22094;
+      rise_capacitance : 0.223351;
+      rise_capacitance_range (0.194715, 0.244025);
+      fall_capacitance : 0.218529;
+      fall_capacitance_range (0.196944, 0.232784);
+    }
+  }
+ cell (sg13g2_IOPadInV) {
+    pad_cell : true;
+    area : 14400;
+    dont_touch : true;
+    dont_use : true;
+    cell_footprint : "input";
+    pad_drivers : 1;
+    bond_pads : 1;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+    }
+    leakage_power () {
+      value : 0;
+      when : "pad&p2c";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 788.379;
+      when : "pad&p2c";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 0;
+      when : "!pad&!p2c";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1939.34;
+      when : "!pad&!p2c";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1363.86;
+      related_pg_pin : vdd;
+    }
+    pin (p2c) {
+      direction : "output";
+      output_voltage : "core";
+      function : "pad";
+      related_ground_pin : vss;
+      related_power_pin : vdd;
+      max_capacitance : 0.511894;
+      timing () {
+        related_pin : "pad";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.128437, 0.156341, 0.209301, 0.26138, 0.313254, 0.365086", \
+            "0.129921, 0.160277, 0.21527, 0.267605, 0.319621, 0.37152", \
+            "0.129922, 0.160278, 0.215271, 0.267606, 0.319622, 0.371521", \
+            "0.129923, 0.160279, 0.215272, 0.267607, 0.319623, 0.371522", \
+            "0.129924, 0.16028, 0.215273, 0.267608, 0.319624, 0.371523", \
+            "0.129925, 0.160281, 0.215274, 0.267609, 0.319625, 0.371524", \
+            "0.129926, 0.160282, 0.215275, 0.26761, 0.319626, 0.371525" \
+          );
+        }
+        rise_transition (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.0911138, 0.143001, 0.248865, 0.355819, 0.46337, 0.571267", \
+            "0.0999905, 0.151349, 0.255684, 0.361392, 0.467915, 0.57451", \
+            "0.10577, 0.158143, 0.265081, 0.370243, 0.476096, 0.582889", \
+            "0.108195, 0.160115, 0.265944, 0.37306, 0.478736, 0.585597", \
+            "0.123053, 0.173733, 0.274489, 0.378895, 0.485283, 0.592526", \
+            "0.149693, 0.198494, 0.294069, 0.394742, 0.497169, 0.602121", \
+            "0.174458, 0.219473, 0.312041, 0.409583, 0.509136, 0.612736" \
+          );
+        }
+        cell_fall (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.678008, 0.721423, 0.788094, 0.843279, 0.893033, 0.939333", \
+            "0.705159, 0.748768, 0.815031, 0.869284, 0.918991, 0.965964", \
+            "0.80875, 0.852382, 0.918738, 0.972477, 1.02234, 1.06954", \
+            "0.856371, 0.89997, 0.966223, 1.02116, 1.06995, 1.11843", \
+            "1.18068, 1.22379, 1.29027, 1.34545, 1.39446, 1.44269", \
+            "1.82065, 1.86421, 1.9298, 1.98501, 2.03523, 2.08221", \
+            "2.38962, 2.43241, 2.49779, 2.55238, 2.603, 2.64892" \
+          );
+        }
+        fall_transition (delay_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.20776, 0.248023, 0.318782, 0.388945, 0.460265, 0.532073", \
+            "0.208018, 0.248024, 0.318783, 0.388946, 0.460266, 0.532447", \
+            "0.208019, 0.248025, 0.318818, 0.388947, 0.460267, 0.532448", \
+            "0.20802, 0.248026, 0.318819, 0.389062, 0.460268, 0.533031", \
+            "0.208021, 0.248027, 0.31882, 0.389063, 0.460269, 0.533032", \
+            "0.208022, 0.248028, 0.318821, 0.389064, 0.460561, 0.533033", \
+            "0.209537, 0.249985, 0.3218, 0.391184, 0.463249, 0.534278" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "pad";
+        related_pg_pin : iovdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "6.48615e-09, 6.48635e-09, 6.48586e-09, 6.48589e-09, 6.48539e-09, 6.48601e-09", \
+            "1.2568e-08, 1.25683e-08, 1.25686e-08, 1.25681e-08, 1.25688e-08, 1.25678e-08", \
+            "2.47336e-08, 2.47325e-08, 2.47332e-08, 2.47334e-08, 2.47321e-08, 2.47329e-08", \
+            "3.08162e-08, 3.08168e-08, 3.08161e-08, 3.08154e-08, 3.08163e-08, 3.0817e-08", \
+            "6.1233e-08, 6.12329e-08, 6.1233e-08, 6.12332e-08, 6.12316e-08, 6.12327e-08", \
+            "1.22061e-07, 1.22063e-07, 1.22064e-07, 1.22067e-07, 1.22069e-07, 1.22067e-07", \
+            "1.7782e-07, 1.77831e-07, 1.77823e-07, 1.77827e-07, 1.7783e-07, 1.77829e-07" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "-6.47214e-09, -6.47213e-09, -6.47219e-09, -6.47224e-09, -6.47225e-09, -6.4723e-09", \
+            "-1.25473e-08, -1.25473e-08, -1.25473e-08, -1.25474e-08, -1.25474e-08, -1.25475e-08", \
+            "-2.46978e-08, -2.46978e-08, -2.46979e-08, -2.46979e-08, -2.4698e-08, -2.4698e-08", \
+            "-3.07727e-08, -3.07727e-08, -3.07728e-08, -3.07728e-08, -3.07728e-08, -3.07729e-08", \
+            "-6.11476e-08, -6.11476e-08, -6.11477e-08, -6.11477e-08, -6.11477e-08, -6.11477e-08", \
+            "-1.21898e-07, -1.21898e-07, -1.21898e-07, -1.21898e-07, -1.21898e-07, -1.21898e-07", \
+            "-1.77583e-07, -1.77583e-07, -1.77584e-07, -1.77584e-07, -1.77584e-07, -1.77584e-07" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "pad";
+        related_pg_pin : vdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.00074628, 0.0010612, 0.00126846, 0.00101035, 0.000860111, 0.000447451", \
+            "0.000343645, 0.000529653, 0.000698435, 0.000632456, 0.000380591, 0.000243655", \
+            "-0.000300165, 0.000205459, 0.000223559, 5.23879e-05, -0.000184465, -0.000319889", \
+            "-0.000266793, 0.000110009, 0.000292679, 0.000261152, -9.57971e-05, -0.000420977", \
+            "-0.00126965, -0.00135154, -0.00125971, -0.000960004, -0.000746821, -0.00111131", \
+            "-0.00174019, -0.00143301, -0.00184118, -0.00166416, -0.00222361, -0.00221691", \
+            "-0.001408, -0.0014408, -0.00171914, -0.00197661, -0.00299473, -0.00318124" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.12, 0.24, 0.48, 0.6, 1.2, 2.4, 3.5");
+          index_2 ("0.024, 0.048, 0.096, 0.144, 0.192, 0.24");
+          values ( \
+            "0.0428208, 0.0426887, 0.0428407, 0.0430691, 0.0432502, 0.0434055", \
+            "0.0416674, 0.0415058, 0.0416367, 0.0418299, 0.0420153, 0.0421414", \
+            "0.041024, 0.0408597, 0.0409803, 0.0411418, 0.0413056, 0.041434", \
+            "0.0406117, 0.0404405, 0.0405405, 0.0407108, 0.0408462, 0.0409532", \
+            "0.0403456, 0.0401975, 0.0403046, 0.0404725, 0.0405976, 0.0407119", \
+            "0.039926, 0.0397557, 0.0397974, 0.0399282, 0.040049, 0.0401386", \
+            "0.0408194, 0.0405311, 0.0404295, 0.0404332, 0.0404826, 0.0405242" \
+          );
+        }
+      }
+    }
+    pin (pad) {
+      direction : "input";
+      is_pad : true;
+      input_voltage : "pad";
+      fanout_load : 1;
+      related_ground_pin : iovss;
+      related_power_pin : iovdd;
+      max_transition : 3.5;
+      capacitance : 0.22094;
+      rise_capacitance : 0.223351;
+      rise_capacitance_range (0.194715, 0.244025);
+      fall_capacitance : 0.218529;
+      fall_capacitance_range (0.196944, 0.232784);
+    }
+  }
+ cell (sg13g2_IOPadOut30mAH) {
+    pad_cell : true;
+    area : 14400;
+    dont_touch : true;
+    dont_use : true;
+    cell_footprint : "inout";
+    pad_drivers : 1;
+    bond_pads : 1;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+    }
+    leakage_power () {
+      value : 9036.95;
+      when : "!c2p&!pad";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1545.27;
+      when : "!c2p&!pad";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 1485.88;
+      when : "c2p&pad";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 3850.92;
+      when : "c2p&pad";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 5261.41;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 2698.09;
+      related_pg_pin : vdd;
+    }
+    pin (pad) {
+      direction : "output";
+      is_pad : true;
+      function : "c2p";
+      drive_current : 30;
+      output_voltage : "pad";
+      related_ground_pin : iovss;
+      related_power_pin : iovdd;
+      max_capacitance : 2.62768;
+      timing () {
+        related_pin : "c2p";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "3.07452, 3.65528, 4.50278, 4.88382, 5.43734, 5.97921", \
+            "3.10641, 3.68656, 4.53397, 4.91458, 5.46849, 6.01187", \
+            "3.13042, 3.70998, 4.55748, 4.93818, 5.49194, 6.03536", \
+            "3.20287, 3.78336, 4.63083, 5.01294, 5.56656, 6.10999", \
+            "3.35527, 3.93598, 4.78318, 5.16414, 5.71785, 6.26102", \
+            "3.67354, 4.25378, 5.1014, 5.48249, 6.03652, 6.57941", \
+            "4.33547, 4.91574, 5.76314, 6.14419, 6.69768, 7.24047" \
+          );
+        }
+        rise_transition (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "0.977452, 1.74011, 3.13708, 3.83946, 4.90743, 5.98339", \
+            "0.978292, 1.74081, 3.13731, 3.84002, 4.90759, 5.9834", \
+            "0.978293, 1.74082, 3.13732, 3.84003, 4.9076, 5.98341", \
+            "0.978294, 1.74083, 3.13733, 3.84017, 4.90761, 5.98342", \
+            "0.978295, 1.74084, 3.13734, 3.84018, 4.90762, 5.98343", \
+            "0.978296, 1.74085, 3.13735, 3.84019, 4.90763, 5.98344", \
+            "0.978297, 1.74086, 3.13736, 3.8402, 4.90764, 5.98345" \
+          );
+        }
+        cell_fall (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "3.11567, 3.54865, 4.26475, 4.5993, 5.09844, 5.59726", \
+            "3.11568, 3.54866, 4.26476, 4.59931, 5.09845, 5.59727", \
+            "3.11569, 3.54867, 4.26477, 4.59932, 5.09846, 5.59728", \
+            "3.12857, 3.56321, 4.2791, 4.61249, 5.11243, 5.60645", \
+            "3.15984, 3.59436, 4.3095, 4.64338, 5.14226, 5.63883", \
+            "3.20841, 3.64259, 4.35958, 4.6944, 5.19189, 5.68543", \
+            "3.27026, 3.70473, 4.41635, 4.75382, 5.25343, 5.74932" \
+          );
+        }
+        fall_transition (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "1.47215, 1.97804, 3.11069, 3.73516, 4.69878, 5.68782", \
+            "1.47216, 1.97805, 3.1107, 3.73663, 4.69899, 5.68783", \
+            "1.47217, 1.97808, 3.11071, 3.73664, 4.69964, 5.68784", \
+            "1.47218, 1.97853, 3.11072, 3.73665, 4.69965, 5.68785", \
+            "1.47299, 1.97925, 3.11104, 3.73666, 4.70004, 5.68786", \
+            "1.47486, 1.97926, 3.1144, 3.73667, 4.70088, 5.68787", \
+            "1.47621, 1.98181, 3.11441, 3.73668, 4.70125, 5.68788" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "c2p";
+        related_pg_pin : iovdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "7.89091, 7.71501, 7.58553, 7.53549, 7.46694, 7.25973", \
+            "7.94055, 7.73646, 7.5906, 7.55607, 7.47765, 7.38759", \
+            "7.91609, 7.68243, 7.5957, 7.51335, 7.4751, 7.37718", \
+            "7.92691, 7.74003, 7.60665, 7.57392, 7.49103, 7.37019", \
+            "7.93604, 7.74822, 7.61553, 7.54125, 7.49988, 7.38276", \
+            "7.94799, 7.75155, 7.62951, 7.56522, 7.53726, 7.39104", \
+            "7.98183, 7.80981, 7.67769, 7.59729, 7.56279, 7.38228" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "40.0558, 33.0277, 25.9196, 23.7946, 21.4592, 19.7692", \
+            "40.0031, 32.9753, 25.8714, 23.7819, 21.4312, 19.6883", \
+            "40.0103, 32.9954, 25.8847, 23.7418, 21.4397, 19.6963", \
+            "40.0303, 33.0096, 25.8892, 23.7635, 21.4281, 19.6902", \
+            "40.0616, 33.0379, 25.9069, 23.7953, 21.4448, 19.6892", \
+            "40.1094, 33.0645, 25.9324, 23.8028, 21.4656, 19.739", \
+            "40.192, 33.1478, 25.9851, 23.8508, 21.5, 19.7509" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "c2p";
+        related_pg_pin : vdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "-0.00632822, -0.00632839, -0.00632831, -0.00632851, -0.0063284, -0.00632824", \
+            "-0.00796855, -0.00796862, -0.00796863, -0.00796873, -0.0079687, -0.00796863", \
+            "-0.00786991, -0.00786988, -0.0078698, -0.00786992, -0.00786977, -0.00786979", \
+            "-0.00683566, -0.00683587, -0.0068357, -0.00717344, -0.00710646, -0.00710625", \
+            "-0.00410121, -0.00413146, -0.00410122, -0.00410135, -0.00413144, -0.00410124", \
+            "0.00305725, 0.00305707, 0.00305715, 0.00305702, 0.0030571, 0.00305721", \
+            "0.0191038, 0.0191036, 0.0191037, 0.0191035, 0.0191036, 0.0191039" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "0.0445616, 0.0445554, 0.0445512, 0.044547, 0.0445455, 0.0445419", \
+            "0.0435227, 0.043517, 0.0435118, 0.0435079, 0.0435072, 0.0435034", \
+            "0.0440497, 0.0440416, 0.0440357, 0.0440331, 0.044029, 0.0440289", \
+            "0.0451718, 0.0451663, 0.0451535, 0.045148, 0.045152, 0.0451502", \
+            "0.0482758, 0.0482709, 0.0482582, 0.0482609, 0.0481701, 0.0482525", \
+            "0.05505, 0.0554797, 0.0554793, 0.0550322, 0.055475, 0.0551045", \
+            "0.0704838, 0.0704788, 0.0704639, 0.0704683, 0.0704639, 0.0704624" \
+          );
+        }
+      }
+    }
+    pin (c2p) {
+      direction : "input";
+      input_voltage : "core";
+      fanout_load : 0.016;
+      related_ground_pin : vss;
+      related_power_pin : vdd;
+      max_transition : 2.5;
+      capacitance : 0.0371156;
+      rise_capacitance : 0.0365214;
+      rise_capacitance_range (0.0330181, 0.038865);
+      fall_capacitance : 0.0377098;
+      fall_capacitance_range (0.0341408, 0.0399916);
+    }
+  }
+ cell (sg13g2_IOPadOut30mAV) {
+    pad_cell : true;
+    area : 14400;
+    dont_touch : true;
+    dont_use : true;
+    cell_footprint : "inout";
+    pad_drivers : 1;
+    bond_pads : 1;
+    pg_pin (iovdd) {
+      pg_type : primary_power;
+      voltage_name : "iovdd";
+    }
+    pg_pin (iovss) {
+      pg_type : primary_ground;
+      voltage_name : "iovss";
+    }
+    pg_pin (vdd) {
+      pg_type : primary_power;
+      voltage_name : "vdd";
+    }
+    pg_pin (vss) {
+      pg_type : primary_ground;
+      voltage_name : "vss";
+    }
+    leakage_power () {
+      value : 9036.95;
+      when : "!c2p&!pad";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 1545.27;
+      when : "!c2p&!pad";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 1485.88;
+      when : "c2p&pad";
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 3850.92;
+      when : "c2p&pad";
+      related_pg_pin : vdd;
+    }
+    leakage_power () {
+      value : 5261.41;
+      related_pg_pin : iovdd;
+    }
+    leakage_power () {
+      value : 2698.09;
+      related_pg_pin : vdd;
+    }
+    pin (pad) {
+      direction : "output";
+      is_pad : true;
+      function : "c2p";
+      drive_current : 30;
+      output_voltage : "pad";
+      related_ground_pin : iovss;
+      related_power_pin : iovdd;
+      max_capacitance : 2.62768;
+      timing () {
+        related_pin : "c2p";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "3.07452, 3.65528, 4.50278, 4.88382, 5.43734, 5.97921", \
+            "3.10641, 3.68656, 4.53397, 4.91458, 5.46849, 6.01187", \
+            "3.13042, 3.70998, 4.55748, 4.93818, 5.49194, 6.03536", \
+            "3.20287, 3.78336, 4.63083, 5.01294, 5.56656, 6.10999", \
+            "3.35527, 3.93598, 4.78318, 5.16414, 5.71785, 6.26102", \
+            "3.67354, 4.25378, 5.1014, 5.48249, 6.03652, 6.57941", \
+            "4.33547, 4.91574, 5.76314, 6.14419, 6.69768, 7.24047" \
+          );
+        }
+        rise_transition (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "0.977452, 1.74011, 3.13708, 3.83946, 4.90743, 5.98339", \
+            "0.978292, 1.74081, 3.13731, 3.84002, 4.90759, 5.9834", \
+            "0.978293, 1.74082, 3.13732, 3.84003, 4.9076, 5.98341", \
+            "0.978294, 1.74083, 3.13733, 3.84017, 4.90761, 5.98342", \
+            "0.978295, 1.74084, 3.13734, 3.84018, 4.90762, 5.98343", \
+            "0.978296, 1.74085, 3.13735, 3.84019, 4.90763, 5.98344", \
+            "0.978297, 1.74086, 3.13736, 3.8402, 4.90764, 5.98345" \
+          );
+        }
+        cell_fall (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "3.11567, 3.54865, 4.26475, 4.5993, 5.09844, 5.59726", \
+            "3.11568, 3.54866, 4.26476, 4.59931, 5.09845, 5.59727", \
+            "3.11569, 3.54867, 4.26477, 4.59932, 5.09846, 5.59728", \
+            "3.12857, 3.56321, 4.2791, 4.61249, 5.11243, 5.60645", \
+            "3.15984, 3.59436, 4.3095, 4.64338, 5.14226, 5.63883", \
+            "3.20841, 3.64259, 4.35958, 4.6944, 5.19189, 5.68543", \
+            "3.27026, 3.70473, 4.41635, 4.75382, 5.25343, 5.74932" \
+          );
+        }
+        fall_transition (delay_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "1.47215, 1.97804, 3.11069, 3.73516, 4.69878, 5.68782", \
+            "1.47216, 1.97805, 3.1107, 3.73663, 4.69899, 5.68783", \
+            "1.47217, 1.97808, 3.11071, 3.73664, 4.69964, 5.68784", \
+            "1.47218, 1.97853, 3.11072, 3.73665, 4.69965, 5.68785", \
+            "1.47299, 1.97925, 3.11104, 3.73666, 4.70004, 5.68786", \
+            "1.47486, 1.97926, 3.1144, 3.73667, 4.70088, 5.68787", \
+            "1.47621, 1.98181, 3.11441, 3.73668, 4.70125, 5.68788" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "c2p";
+        related_pg_pin : iovdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "7.89091, 7.71501, 7.58553, 7.53549, 7.46694, 7.25973", \
+            "7.94055, 7.73646, 7.5906, 7.55607, 7.47765, 7.38759", \
+            "7.91609, 7.68243, 7.5957, 7.51335, 7.4751, 7.37718", \
+            "7.92691, 7.74003, 7.60665, 7.57392, 7.49103, 7.37019", \
+            "7.93604, 7.74822, 7.61553, 7.54125, 7.49988, 7.38276", \
+            "7.94799, 7.75155, 7.62951, 7.56522, 7.53726, 7.39104", \
+            "7.98183, 7.80981, 7.67769, 7.59729, 7.56279, 7.38228" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "40.0558, 33.0277, 25.9196, 23.7946, 21.4592, 19.7692", \
+            "40.0031, 32.9753, 25.8714, 23.7819, 21.4312, 19.6883", \
+            "40.0103, 32.9954, 25.8847, 23.7418, 21.4397, 19.6963", \
+            "40.0303, 33.0096, 25.8892, 23.7635, 21.4281, 19.6902", \
+            "40.0616, 33.0379, 25.9069, 23.7953, 21.4448, 19.6892", \
+            "40.1094, 33.0645, 25.9324, 23.8028, 21.4656, 19.739", \
+            "40.192, 33.1478, 25.9851, 23.8508, 21.5, 19.7509" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "c2p";
+        related_pg_pin : vdd;
+        rise_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "-0.00632822, -0.00632839, -0.00632831, -0.00632851, -0.0063284, -0.00632824", \
+            "-0.00796855, -0.00796862, -0.00796863, -0.00796873, -0.0079687, -0.00796863", \
+            "-0.00786991, -0.00786988, -0.0078698, -0.00786992, -0.00786977, -0.00786979", \
+            "-0.00683566, -0.00683587, -0.0068357, -0.00717344, -0.00710646, -0.00710625", \
+            "-0.00410121, -0.00413146, -0.00410122, -0.00410135, -0.00413144, -0.00410124", \
+            "0.00305725, 0.00305707, 0.00305715, 0.00305702, 0.0030571, 0.00305721", \
+            "0.0191038, 0.0191036, 0.0191037, 0.0191035, 0.0191036, 0.0191039" \
+          );
+        }
+        fall_power (power_template_7x6_16) {
+          index_1 ("0.02, 0.1, 0.17, 0.33, 0.64, 1.26, 2.5");
+          index_2 ("2, 6, 14, 18, 24, 30");
+          values ( \
+            "0.0445616, 0.0445554, 0.0445512, 0.044547, 0.0445455, 0.0445419", \
+            "0.0435227, 0.043517, 0.0435118, 0.0435079, 0.0435072, 0.0435034", \
+            "0.0440497, 0.0440416, 0.0440357, 0.0440331, 0.044029, 0.0440289", \
+            "0.0451718, 0.0451663, 0.0451535, 0.045148, 0.045152, 0.0451502", \
+            "0.0482758, 0.0482709, 0.0482582, 0.0482609, 0.0481701, 0.0482525", \
+            "0.05505, 0.0554797, 0.0554793, 0.0550322, 0.055475, 0.0551045", \
+            "0.0704838, 0.0704788, 0.0704639, 0.0704683, 0.0704639, 0.0704624" \
+          );
+        }
+      }
+    }
+    pin (c2p) {
+      direction : "input";
+      input_voltage : "core";
+      fanout_load : 0.016;
+      related_ground_pin : vss;
+      related_power_pin : vdd;
+      max_transition : 2.5;
+      capacitance : 0.0371156;
+      rise_capacitance : 0.0365214;
+      rise_capacitance_range (0.0330181, 0.038865);
+      fall_capacitance : 0.0377098;
+      fall_capacitance_range (0.0341408, 0.0399916);
+    }
+  }
+}
